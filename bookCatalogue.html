@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<!-- we wait for the html to load before calling the libraryLoad function -->
+<body onload="libraryLoad()">
+    <form>
+        <!-- we use text boxes to collect info from the user -->
+        <label for="bAuthor">Enter the book's author: </label>
+        <input type="text" name="bAuthor" id="bAuthor" required>
+        <label for="bTitle">Enter the book's title: </label>
+        <input type="text" name="bTitle" id="bTitle" required>
+        <label for="bGenre">Enter the book's genre: </label>
+        <select id="bGenre">
+            <option value="">--Please choose an option--</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="horror">Horror</option>
+            <option value="thriller">Thriller</option>
+            <option value="romance">Romance</option>
+            <option value="nonfiction">Non-Fiction</option>
+        </select>
+        <label for="bReview">Enter a review of the book: </label>
+        <input type="text" name="bReview" id="bReview" required>
+        <!-- upon filling in all boxes, the button below calls the addBook function -->
+        <button onclick="addBook()">Create new book object</button>
+    </form>
+    <br>
+    <table>
+        <!-- this is our interactive table, see below the 'bookTable' id, which will be populated with the users input -->
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+
+        <tbody id = "bookTable">
+        </tbody>
+    </table>
+    <script type="text/javascript" src="bookCatalogue.js"></script>
+</body>
+
+</html>
