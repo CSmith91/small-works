@@ -1,0 +1,115 @@
+/* The below media query checks the minimum width is at least 1350px. This is our largest size for the table */
+@media screen and (min-width: 1350px) {
+
+    /* The gird container is set to be 18 columns long and is responsive to the user's screen */
+    .grid-container {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 
+            repeat(18, 1fr);
+        max-height: 100%;
+        width: auto;
+        }
+    
+    .grid-item {
+        display: block;
+        background-color: plum;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 5%;
+        font-size: 2vmin;
+
+    }
+    
+    .blank-grid-item {
+        text-align: center;
+        font-size: 1vmin;
+        }
+    
+    /* The images below are set not to show here as the screen is large enough for the above */
+    .myTable {
+        display: none;
+    
+        
+    } 
+    
+    .tooSmall {
+        display: none;
+    }
+    
+    }
+
+/* The next size down we remove the full names of the elements to save on space but still allow a responsive design */
+@media screen and (min-width: 650px) and (max-width: 1350px) {
+
+.grid-container {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 
+        repeat(18, 1fr);
+}
+
+.grid-item {
+    display: block;
+    background-color: plum;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5%;
+    font-size: 2vmin;
+}
+
+.blank-grid-item {
+    text-align: center;
+    font-size: 1vmin;
+    }
+
+.fullName {
+    display: none
+}
+
+.myTable {
+    display: none;
+
+    
+} 
+
+.tooSmall {
+    display: none;
+}
+
+}
+
+/* Here we now remove the grid entirely and swap for the images */
+@media screen and (max-width: 650px) {
+
+    .grid-container {
+        display: none;
+    }
+    
+    .myTable {
+        display: block;
+        margin: 10vh auto;
+    } 
+
+    .tooSmall {
+        display: none;
+    }
+    
+    }
+
+@media screen and (max-width: 500px) and (max-height: 300px){
+
+    .grid-container {
+        display: none;
+    }
+    
+    .myTable {
+        display: none;
+    }
+
+    .tooSmall {
+        display: block;
+        margin: 10vh auto;
+    }
+    
+    }
